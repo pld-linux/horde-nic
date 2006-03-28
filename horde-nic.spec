@@ -9,10 +9,10 @@ Summary:	NIC is a suite of simple network utilities
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
-License:	GPL v2 (CHECK IT FIRST, could be ASL)
+License:	BSD
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	
+# Source0-md5:	7f3f1a42b62b1c9cb3d7ea545f59ef14
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/nic/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
@@ -21,7 +21,6 @@ BuildRequires:	tar >= 1:1.15.1
 Requires:	apache(mod_access)
 Requires:	horde >= 3.0
 Requires:	webapps
-#Obsoletes:	%{_hordeapp}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,17 +37,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 NIC is a suite of simple network utilities given a PHP web frontend.
 The list of tools includes:
-
-    - Finger
-    - ICQ lookup
-    - DNS lookup
-    - Email address verification
-    - Ping
-    - SMTP open relay checking
-    - Service status
-    - Traceroute
-    - Whois
-
+- Finger
+- ICQ lookup
+- DNS lookup
+- Email address verification
+- Ping
+- SMTP open relay checking
+- Service status
+- Traceroute
+- Whois
 
 The Horde Project writes web applications in PHP and releases them
 under the GNU Public License. For more information (including help
@@ -58,12 +55,11 @@ with nic) please visit <http://www.horde.org/>.
 %setup -qcT -n %{?_snap:%{_hordeapp}-%{_snap}}%{!?_snap:%{_hordeapp}-%{version}%{?_rc:-%{_rc}}}
 tar zxf %{SOURCE0} --strip-components=1
 
-rm -f {,*/}.htaccess
 for i in config/*.dist; do
 	mv $i config/$(basename $i .dist)
 done
 # considered harmful (horde/docs/SECURITY)
-rm -f test.php
+rm test.php
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -111,7 +107,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc README docs/* scripts
+%doc LICENSE README docs/* scripts
 %dir %attr(750,root,http) %{_sysconfdir}
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/apache.conf
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/httpd.conf
