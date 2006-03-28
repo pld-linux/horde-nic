@@ -88,6 +88,15 @@ if [ ! -f %{_sysconfdir}/conf.php.bak ]; then
 	install /dev/null -o root -g http -m660 %{_sysconfdir}/conf.php.bak
 fi
 
+if [ "$1" = 1 ]; then
+%banner %{name} -e <<-EOF
+        IMPORTANT:
+        If you are installing NIC for the first time, You may need to
+        create the NIC database tables. To do so run:
+        zcat %{_docdir}/%{name}-%{version}/scripts/sql/%{_hordeapp}.sql.gz | mysql horde
+EOF
+fi
+
 %triggerin -- apache1
 %webapp_register apache %{_webapp}
 
