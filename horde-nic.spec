@@ -9,7 +9,7 @@ Summary:	NIC is a suite of simple network utilities
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
-License:	BSD
+License:	BSD/GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
 # Source0-md5:	7f3f1a42b62b1c9cb3d7ea545f59ef14
