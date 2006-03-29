@@ -86,10 +86,10 @@ fi
 
 if [ "$1" = 1 ]; then
 %banner %{name} -e <<-EOF
-        IMPORTANT:
-        If you are installing NIC for the first time, You may need to
-        create the NIC database tables. To do so run:
-        zcat %{_docdir}/%{name}-%{version}/scripts/sql/%{_hordeapp}.sql.gz | mysql horde
+	IMPORTANT:
+	If you are installing NIC for the first time, You may need to
+	create the NIC database tables. To do so run:
+	zcat %{_docdir}/%{name}-%{version}/scripts/sql/%{_hordeapp}.sql.gz | mysql horde
 EOF
 fi
 
