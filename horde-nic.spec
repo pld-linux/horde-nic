@@ -6,7 +6,7 @@
 
 %include	/usr/lib/rpm/macros.php
 Summary:	NIC is a suite of simple network utilities
-Summary(pl):	NIC - zestaw prostych narzêdzi sieciowych
+Summary(pl.UTF-8):   NIC - zestaw prostych narzÄ™dzi sieciowych
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
@@ -52,22 +52,22 @@ The Horde Project writes web applications in PHP and releases them
 under the GNU Public License. For more information (including help
 with nic) please visit <http://www.horde.org/>.
 
-%description -l pl
-NIC to zestaw prostych narzêdzi sieciowych wyposa¿onych w interfejs
-WWW napisany w PHP. Dostêpne s± nastêpuj±ce narzêdzia:
+%description -l pl.UTF-8
+NIC to zestaw prostych narzÄ™dzi sieciowych wyposaÅ¼onych w interfejs
+WWW napisany w PHP. DostÄ™pne sÄ… nastÄ™pujÄ…ce narzÄ™dzia:
 - finger
 - wyszukiwanie ICQ
 - wyszukiwanie DNS
-- weryfikacja adresów e-mail
+- weryfikacja adresÃ³w e-mail
 - ping
-- sprawdzanie SMTP pod k±tem open relay
-- stan us³ug
+- sprawdzanie SMTP pod kÄ…tem open relay
+- stan usÅ‚ug
 - traceroute
 - whois
 
 Projekt Horde tworzy aplikacje WWW w PHP i wydaje je na licencji GNU
-General Public License. Wiêcej informacji (w³±cznie z pomoc± dla nic)
-mo¿na znale¼æ na stronie <http://www.horde.org/>.
+General Public License. WiÄ™cej informacji (wÅ‚Ä…cznie z pomocÄ… dla nic)
+moÅ¼na znaleÅºÄ‡ na stronie <http://www.horde.org/>.
 
 %prep
 %setup -qcT -n %{?_snap:%{_hordeapp}-%{_snap}}%{!?_snap:%{_hordeapp}-%{version}%{?_rc:-%{_rc}}}
