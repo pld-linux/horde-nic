@@ -6,7 +6,7 @@
 
 %include	/usr/lib/rpm/macros.php
 Summary:	NIC is a suite of simple network utilities
-Summary(pl.UTF-8):   NIC - zestaw prostych narzędzi sieciowych
+Summary(pl.UTF-8):	NIC - zestaw prostych narzędzi sieciowych
 Name:		horde-%{_hordeapp}
 Version:	0.1
 Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
