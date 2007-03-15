@@ -1,6 +1,6 @@
 
 %define	_hordeapp nic
-%define	_snap	2006-03-28
+%define	_snap	2007-03-15
 #define	_rc		rc1
 %define	_rel	1
 
@@ -13,7 +13,7 @@ Release:	%{?_rc:0.%{_rc}.}%{?_snap:0.%(echo %{_snap} | tr -d -).}%{_rel}
 License:	BSD/GPL
 Group:		Applications/WWW
 Source0:	ftp://ftp.horde.org/pub/snaps/%{_snap}/%{_hordeapp}-HEAD-%{_snap}.tar.gz
-# Source0-md5:	7f3f1a42b62b1c9cb3d7ea545f59ef14
+# Source0-md5:	7ff2eced2da9db82277bd875a83afb72
 Source1:	%{_hordeapp}.conf
 URL:		http://www.horde.org/nic/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
