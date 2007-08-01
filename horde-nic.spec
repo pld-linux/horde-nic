@@ -2,7 +2,7 @@
 %define	_hordeapp nic
 %define	_snap	2007-03-15
 #define	_rc		rc1
-%define	_rel	1
+%define	_rel	2
 
 %include	/usr/lib/rpm/macros.php
 Summary:	NIC is a suite of simple network utilities
