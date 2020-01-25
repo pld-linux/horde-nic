@@ -4,7 +4,6 @@
 #define	_rc		rc1
 %define	_rel	4
 
-%include	/usr/lib/rpm/macros.php
 Summary:	NIC is a suite of simple network utilities
 Summary(pl.UTF-8):	NIC - zestaw prostych narzędzi sieciowych
 Name:		horde-%{_hordeapp}
